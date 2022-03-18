@@ -16,39 +16,48 @@ img {
 
 main {
   position: absolute;
-  left: 38%;
+  left: 35%;
   top: 35%;
 }
+
 #clock {
   color: burlywood;
   font-size: 6em;
   margin: auto;
+  padding-left: 2rem;
 }
 
-#greeting {
-  margin: auto;
+#login-form h2 {
   font-weight: bolder;
-  color: antiquewhite;
-  padding-left: 3rem;
-}
-
-#quote {
-  position: absolute;
-  bottom: 1rem;
-  left: 31%;
-}
-
-#login-form h3 {
   margin: auto;
-  padding-left: 2.1rem;
+  padding-left: 2.3rem;
 }
 
 #login-form input {
   border-top: none;
   border-left: none;
   border-right: none;
+  margin-left: 1.1rem;
   background: transparent;
 }
 
-#login-btn {
+#login-form input:focus {
+  outline: none;
+}
+
+.login {
+  padding-left: 3rem;
+}
+
+#greeting {
+  margin: auto;
+  font-weight: bolder;
+  color: black;
+  padding-left: 0rem;
+}
+
+#quote {
+  position: absolute;
+  bottom: 1rem;
+  left: 31%;
 }
