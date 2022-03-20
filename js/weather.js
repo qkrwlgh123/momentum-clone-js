@@ -10,10 +10,10 @@ function onGeoOk(position) {
       const temp = document.querySelector('#geo span:first-child');
       const name = document.querySelector('.name');
       const weather = document.querySelector('#geo span:last-child');
-      console.log(data);
+
       name.innerText = `in ${data.name}`;
       temp.innerText = `${Math.round(data.main.temp)}°C`;
-      weather.innerText = `Today's weather is..${data.weather[0].main}!`;
+      weather.innerText = `Today is ${data.weather[0].main}!`;
     });
 }
 function onGeoError() {
