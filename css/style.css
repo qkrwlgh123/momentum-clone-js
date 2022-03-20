@@ -30,12 +30,7 @@ main {
   margin: auto;
 }
 
-#login-form h2 {
-  font-size: 2.5rem;
-  margin-top: 0;
-}
-
-input {
+.login input {
   width: 15%;
   border-top: none;
   border-left: none;
@@ -43,13 +38,31 @@ input {
   background: transparent;
 }
 
-input:focus {
+.login input:focus {
+  outline: none;
+}
+
+#login-form h2 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+#todo-form input {
+  width: 15%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+}
+
+#todo-form input:focus {
   outline: none;
 }
 
 #greeting {
   font-size: 2.5rem;
   margin-top: 0;
+  animation: fadein 1s;
 }
 
 #quote {
@@ -85,24 +98,22 @@ input:focus {
 }
 
 #todo-list {
+  animation: fadein 1s;
   list-style: none;
 }
 
 #todo-list li {
   padding-right: 3vw;
+  animation: fadein 1s;
 }
 
 button {
   border: 1px solid black;
   background: transparent;
   border: none;
+  animation: fadein 1s;
 }
 
-#todo-list input {
-  width: 2vw;
-  margin-right: 0;
-  margin-left: 2vw;
-}
 @-webkit-keyframes fadein {
   /* Safari and Chrome */
   from {

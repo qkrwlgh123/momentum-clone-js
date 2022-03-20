@@ -1,6 +1,7 @@
 const loginForm = document.querySelector('#login-form');
 const loginInput = document.querySelector('#login-form input');
 const greeting = document.querySelector('#greeting');
+const todoList = document.querySelector('#todo-list');
 
 const HIDDEN_CLASSNAME = 'hidden';
 const USERNAME_KEY = 'username';
@@ -11,17 +12,13 @@ function onLoginSubmit(event) {
   localStorage.setItem(USERNAME_KEY, username);
   loginForm.classList.add(HIDDEN_CLASSNAME);
   paintGreetings();
+  todoList.classList.remove(HIDDEN_CLASSNAME);
 }
 
 function paintGreetings() {
   const username = localStorage.getItem(USERNAME_KEY);
   greeting.classList.remove(HIDDEN_CLASSNAME);
 
-  // 시간이 오전(6시 ~ 12시)이면 -> `Good morning jiho`
-  // 시간이 점심이면(12시 ~ 2시) -> `Did you eat lunch, jiho?`
-  // 시간이 오후이면(2시 ~ 6시) -> `Good afternoon jiho`
-  // 시간이 저녁이면(6시 ~ 10시) -> `Have you eaten dinner, jiho?`
-  // 시간이 밤이면(10시 ~ 2시) -> `Good night jiho`
   const date = new Date();
   const hours = date.getHours();
 
@@ -45,5 +42,6 @@ if (savedUsername === null) {
   loginForm.addEventListener('submit', onLoginSubmit);
 } else {
   loginForm.classList.add(HIDDEN_CLASSNAME);
+  todoList.classList.remove(HIDDEN_CLASSNAME);
   paintGreetings();
 }
